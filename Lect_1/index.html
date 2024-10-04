@@ -8,16 +8,27 @@
 </head>
 
 <body>
-    <h1>Галерея со стрелками для перелистывания</h1>
-    <a href="">leftArrow</a>
-    <img src="" alt=""><img src="" alt=""><img src="" alt="">
-    <a href="">rightArrow</a>
 
 
     <!-- Скрипты добавляем всегда последней строчкой в body-->
+    
     <script>
-        let countClickButton = 0;
+        let countClickButton = 10;
+        console.log(countClickButton);
+        console.log(typeof countClickButton);    
+
     </script>
+    <!-- typeof - тип данных, console.log() - вывести в консоль -->
+
+    <script>
+        let res = 888;
+        let literal = `Результат: ${res}`;
+        console.log(literal); // Результат: 888
+        console.log(`На кнопку нажали: ${countClickButton + 5} раз`) // На кнопку нажали: 15 раз
+        const pi = 3.14;
+        console.log(`Число ПИ равно ${pi}`)
+    </script>
+    <!-- Склейка данных разных типов в строку через бэктики (вид ковычек ``) -->
 </body>
 
 </html>
