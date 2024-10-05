@@ -7,3 +7,14 @@ console.log(-a);
 a = 'Hello';
 b = 'World';
 console.log(a+' '+b);
+
+let val1 = 6;
+let val2 = 3;
+let summ = val1 + val2;
+console.log('Сумма = ', summ);
+let diff = val1 - val2;
+console.log('Разница = ', diff);
+let product = val1 * val2;
+console.log('Произведение = ', product);
+let quotient = val1 / val2;
+console.log('Частное = ', quotient);
