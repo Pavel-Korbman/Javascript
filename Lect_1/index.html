@@ -12,15 +12,17 @@
 
     <!-- Скрипты добавляем всегда последней строчкой в body-->
 
+    <!-- number - числа. Для типа number установлено ограничение на максимальные значения от
+     -((2^53)-1) до (2^53)-1. -->
     <script>
         let countClickButton = 10;
-        console.log(countClickButton);
-        console.log(typeof countClickButton);
-
+        console.log(countClickButton); // 10
+        console.log(typeof countClickButton); // number
     </script>
     <!-- typeof - тип данных, console.log() - вывести в консоль -->
 
-    <script>
+   
+   <script>
         let res = 888;
         let literal = `Результат: ${res}`;
         console.log(literal); // Результат: 888
@@ -29,18 +31,21 @@
         console.log(`Число ПИ равно ${pi}`)
     </script>
     <!-- Склейка данных разных типов в строку через бэктики (вид ковычек ``) -->
-    <script>
+    
+   <!-- Boolean  true false-->
+   <script>
         let examen = true;
         if (examen) { console.log("Экзамен сдан") }
         else { console.log("Экзамен не сдан") };
     </script>
 
+    <!-- Undefined — это специализированный тип данных, который имеет одно-единственное значение undefined и автоматически присваивается вновь созданным, но не инициализированным другим значением переменным.-->
     <script>
         let value;
-        console.log(typeof value); // undefined - незаданный тип . пустое значение
+        console.log(typeof value); // undefined
     </script>
 
-    <!-- ОБЪЕКТ -->
+    <!-- ОБЪЕКТ object -->
     <script>
         let student = {
             firstName: "Иван",
@@ -48,15 +53,51 @@
             age: 20
         }
         console.log(student); // {firstName: 'Иван', secondName: 'Иванов', age: 20}
-        
+        console.log(typeof student); // object
         console.log(`Студенту ${student.firstName} ${student.secondName} исполнилось ${student.age} лет`); // Студенту Иван Иванов исполнилось 20 лет
     </script>
-    <!-- Специальные объекты Array Function  -->
-     <script>
+    <!-- Специальные объекты Array, Function  -->
+    <script>
+        let listOfBook = ['Толстой "Война и мир"', 'Стругацкие "Сталкер"', 'Маркс "Капитал"'];
+        console.log(listOfBook[0]); //Толстой "Война и мир"
+        console.log(listOfBook[2]); //Маркс "Капитал"
+        console.log(listOfBook); //(3) ['Толстой "Война и мир"', 'Стругацкие "Сталкер"', 'Маркс "Капитал"']
 
+        const summTo = function (num){
+            return num + 2;
+        }
+        console.log(summTo.toString()); // function (num) { return num + 2; }
+        console.log(summTo(10)); // 12
+    </script>
+    <!-- null — это специальное значение, которое используется с переменными объектного типа для     указания, что в переменной нет объекта. Null — примитивный тип. В операциях сравнения и булевой     логике он выступает как ложное (false) значение. -->
+    <script>
+       if (student != null) console.log(student)
+       else console.log("student = null");
+    </script>
+
+    <!-- Symbol()y - новый тип данных, чтобы создавать уникальные ключи для свойств объектов или каких-либо других целей. Для создания символа необходимо вызвать функцию (конструктор) этого типа Symbol(). Также в качестве аргумента в эту функцию можно передать строку, что позволит создать символ на основе вашей строки.  -->
+    <script>
+        const uniqKey = Symbol();
+        console.log(uniqKey.toString()); // Symbol()        
+        uniqKey2 = Symbol('test');
+        uniqKey3 = Symbol('test');
+        console.log(uniqKey2.toString()); // Symbol(test)
+        console.log(uniqKey2 == uniqKey3); // false - символы всегда уникальны
+    </script>
+
+    <!-- bigint - супербольшие значения, выходящие из диапазона (-((2^53)-1) до (2^53)-1 )ограничений чисел (только целые числа). Записываются как обычное целое число, только в конце добавляется литера n. -->
+     <script>
+        let bigValue = 8213074179487987581n;
+        console.log(bigValue); // 8213074179487987581n
+        c // bigint
      </script>
 
-
+     <script>
+        let userName = 'Pavel';
+        let userSecondName = 'Korbman';
+        console.log(`Привет ${userName} ${userSecondName}.
+        Как дела?`);
+     </script>
 
 </body>
 
