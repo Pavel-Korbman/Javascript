@@ -4,9 +4,7 @@
 */
 
 let squareRoot = (Number) => Math.sqrt(Number);
-
 let summSquareRoot = (a, b) => squareRoot(a) + squareRoot(b);
-
 function printRes() {
     console.log(summSquareRoot(3, 4));
 }
