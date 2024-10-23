@@ -1,23 +1,33 @@
-// Задание 1 Описание задачи: Используя цикл for, выведите в консоль 11 строк, где каждая строка содержит индекс и описание числа (0- это ноль, 1- нечетное число, 2- четное число и т.д.). 
+// Задание 1 Описание задачи: Используя цикл for, выведите в консоль 11 строк, где каждая строка содержит индекс и описание числа (0- это ноль, 1- нечётное число, 2- чётное число и т.д.). 
 // Эталонное решение: 
 // Цикл для вывода строк 
-for (let i = 0; i <= 10; i++) { 
-    if (i === 0) { console.log(`${i}– это ноль`); 
-} else if (i % 2 === 0) { 
-    console.log(`${i}– четное число`); 
-} else { console.log(`${i}– нечетное число`); } } 
+// for (let i = 0; i <= 10; i++) { 
+//     if (i === 0) { console.log(`${i}– это ноль`); 
+// } else if (i % 2 === 0) { 
+//     console.log(`${i}– четное число`); 
+// } else { console.log(`${i}– нечетное число`); } } 
+
+// Моё решение:
+// console.log('0 - это ноль');
+// for (i = 1; i < 12; i++) {
+//     (i % 2 !== 0) ? console.log(`${i} - не чётное число`) : console.log(`${i} - чётное число`);
+// }
 
 // Задание 2 Описание задачи: Имеется массив [1, 2, 3, 4, 5, 6, 7]. Необходимо удалить элементы 4 и 5, чтобы получить массив [1, 2, 3, 6, 7]. 
 
 // Эталонное решение: 
 // Исходный массив 
-let array = [1, 2, 3, 4, 5, 6, 7]; 
-// Удаление элементов 4 и 5 
-array.splice(array.indexOf(4), 1); 
-array.splice(array.indexOf(5), 1); 
-// Вывод результата 
-console.log(array); // [1, 2, 3, 6, 7]
+// let array = [1, 2, 3, 4, 5, 6, 7]; 
+// // Удаление элементов 4 и 5 
+// array.splice(array.indexOf(4), 1); 
+// array.splice(array.indexOf(5), 1); 
+// // Вывод результата 
+// console.log(array); // [1, 2, 3, 6, 7]
 
+// let array = [1, 2, 3, 4, 5, 6, 7]; 
+// console.log(array);
+// array.splice(3, 2); 
+// console.log(array);
 
 // Задание 3 
 // Описание задачи:
@@ -28,20 +38,47 @@ console.log(array); // [1, 2, 3, 6, 7]
 
 // Эталонное решение: 
 
-// Генерация массива из 5 случайных чисел от 0 до 9 
-let array = []; for (let i = 0; i < 5; i++) { array.push(Math.floor(Math.random() * 10)); } 
-// Вычисление суммы элементов массива 
-let sum = array.reduce((acc, num) => acc + num, 0); 
-// Нахождение минимального числа 
-let min = Math.min(...array); 
-// Проверка наличия числа 3 
-let hasThree = array.includes(3); 
-// Вывод результатов 
-console.log('Массив:', array); 
-console.log('Сумма элементов:', sum); console.log('Минимальное число:', min); console.log('Есть ли число 3:', hasThree);
+// // Генерация массива из 5 случайных чисел от 0 до 9 
+// let array = []; for (let i = 0; i < 5; i++) { array.push(Math.floor(Math.random() * 10)); } 
+// // Вычисление суммы элементов массива 
+// let sum = array.reduce((acc, num) => acc + num, 0); 
+// // Нахождение минимального числа 
+// let min = Math.min(...array); 
+// // Проверка наличия числа 3 
+// let hasThree = array.includes(3); 
+// // Вывод результатов 
+// console.log('Массив:', array); 
+// console.log('Сумма элементов:', sum); console.log('Минимальное число:', min); console.log('Есть ли число 3:', hasThree);
+
+//Моё решение
+// let array = [];
+// for (i = 0; i < 5; i++) {
+//     array[i] = Math.floor(Math.random() * 10);
+// }
+// console.log(array);
+// console.log(array.length);
+// let summ = 0;
+// for (value of array) {
+//     summ = summ + value;
+// }
+// let min = Math.min(...array);
+// console.log('Сумма = ' + summ);
+// console.log('Мин = ' + min);
+// let three = array.includes(3);
+// console.log('3 = ' + three);
+
+
+
 
 // Задание 4 Необязательное задание Описание задачи: Используя цикл for, выведите в консоль "горку" из символов x с 20 рядами. Эталонное решение: 
 
 // Цикл для вывода горки 
-for (let i = 1; i <= 20; i++) { 
-    console.log('x'.repeat(i)); }
+// for (let i = 1; i <= 20; i++) { 
+//     console.log('x'.repeat(i)); }
+
+// Моё решение
+// let string = 'x';
+// for (i = 0; i < 20; i++) {
+//     console.log(string);
+//     string = string + 'x';
+// }
