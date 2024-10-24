@@ -12,6 +12,6 @@ const numbers = {
 
 for (const key in numbers) {
     if (numbers[key]>=3) {
-        console.log[key];        
+        console.log(numbers[key]);  
     }
 }
